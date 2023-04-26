@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autumn Apple Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/img/autumn.jpg" rel="icon" type="image/jpg"/>
+    <!-- fontawesome 5.15.4 css1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css1 js1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- jqueryui css1 js1 -->
+    <link href="./assets/libs/jquery-ui-1.13.2.custom/jquery-ui.min.css" type="text/css" />
+    <!-- lightslider css1 js1 -->
+	<link href="./assets/libs/lightslider-master/dist/css/lightslider.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom css1 -->
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- start modal area -->
+    <!-- start login modal area -->
+    <div id="loginmodal" class="modal">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login Here</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div>
+                        <form method="" action="">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="loginmodalemail" class="form-control" placeholder="Email" autocomplete="off" autofocus />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="loginmodalpassword" class="form-control" placeholder="Password" />
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-primary btn-lg loginbtn" onclick="loginbtn()">Log In</button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <p>
+                        Not Register,Please Click Here!
+                        <button type="button" class="btn btn-success btn-center btn-sm createaccbtn" data-bs-toggle="modal" data-bs-target="#signupmodal">Create New Account</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end login modal area -->
+
+    <!-- start signup modal area -->
+    <div id="signupmodal" class="modal">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Your Own Apple ID</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div>
+                        <form method="" action="" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="firstname">First Name</label>
+                                        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First name" autocomplete="off" autofocus required />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="lastname">Last Name</label>
+                                        <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Last name" autocomplete="off" autofocus required  />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="signupemail" class="form-control" placeholder="Email" autocomplete="off" autofocus />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="signuppassword" class="form-control" placeholder="Password" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 mb-2">
+                                        <select name="Date" id="date">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>31</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4 mb-2">
+                                        <select name="Month" id="month">
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4 mb-2">
+                                        <select name="Year" id="year">
+                                            <option>2023</option>
+                                            <option>2022</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2007</option>
+                                            <option>2006</option>
+                                            <option>2000</option>
+                                            <option>1999</option>
+                                            <option>1998</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <input type="radio" name="gender" id="genderm" class="px-2" value="1" /><label for="genderm">Male</label>
+                                <input type="radio" name="gender" id="genderfm" class="px-2" value="0" /><label for="genderfm">Female</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" name="agree" id="agree" class="form-check-input" /><label for="agree">I agree all the above regulations.</label>
+                            </div>
+                        </form>
+
+                        <!-- <button type="submit" class="btn btn-primary btn-lg signupbtn" disabled>Sign Up</button> -->
+                        <button type="submit" class="btn btn-primary btn-lg signupbtn" onclick="signupbtn()" disabled>Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end signup modal area -->
+
+    <!-- start before buy modal area -->
+    <div id="beforebuymodal" class="modal">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <h3 class="text-center">Please login first !!!</h3>
+                </div>
+
+                <div class="text-center px-3 mb-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginmodal" >Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end before buy modal area -->
+<!-- end modal area -->
+
+
+
+<!-- start header section -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top">
+            <a href="#" class="text-light nav-link mx-2">
+               <img src="assets/img/autumn.jpg" width="50px" alt="autumnlogo" />
+           </a>
+   
+           <button type="button" class="navbar-toggler px-4" data-bs-toggle="collapse" data-bs-target="#nav"><i class="navbar-toggler-icon"></i></button>
+   
+           <div id="nav" class="navbar-collapse collapse justify-content-between">
+               <ul class="navbar-nav ps-3">
+                   <li class="nav-item"><a href="#iphone" class="nav-link"><i class="fas fa-mobile pe-1"></i>iPhone</a></li>
+                   <li class="nav-item"><a href="#mac" class="nav-link"><i class="fas fa-desktop pe-1"></i>Mac</a></li>
+                   <li class="nav-item"><a href="#ipad" class="nav-link"><i class="fas fa-tablet pe-1"></i>iPad</a></li>
+                   <li class="nav-item"><a href="#watch" class="nav-link"><i class="fas fa-clock pe-1"></i>Watch</a></li>
+                   <li class="nav-item"><a href="#airpods" class="nav-link"><i class="fas fa-headphones pe-1"></i>Airpods</a></li>
+                   <li class="nav-item dropdown">
+                       <a href="#accessories" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-cog pe-1"></i>Accessories</a>
+                       <ul class="dropdown-menu">
+                           <li><a href="javascript:void(0);" class="dropdown-item">Cases & Protection</a></li>
+                           <li><a href="javascript:void(0);" class="dropdown-item">Power & Cable</a></li>
+                           <li><a href="javascript:void(0);" class="dropdown-item">MagSafe</a></li>
+                           <li><a href="javascript:void(0);" class="dropdown-item">Mice & Keyboards</a></li>
+                       </ul>
+                   </li>
+                   <li class="nav-item"><a href="#contacts" class="nav-link"><i class="fas fa-map-marker-alt pe-1"></i>Contacts</a></li>
+               </ul>
+
+               <div class="px-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginmodal">Log In</button>
+                </div>
+           </div>
+   
+           <!-- <div class="px-3">
+                <span class="float-right"><i class="fas fa-shopping-bag"></i></span><sup class="badge bg-danger">7</sup>
+           </div> -->
+       </nav>
+    </header>
+<!-- end header section -->
+
+
+
+<!-- start about section -->
+    <section id="about">
+        <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators list-unstyled">
+                <li class="active" data-bs-target="#mycarousel" data-bs-slide-to="0"></li>
+                <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#mycarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#mycarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#mycarousel" data-bs-slide-to="5"></li>
+            </ol>
+
+            <div class="carousel-inner banners">
+                <div class="carousel-item active banners1">
+                    <div class="container">
+                        <div class="carousel-caption d-md-block mb-5">
+                            <h1>Apple</h1>
+                            <h3 class="text-secondary fw-light">Store. The best way to buy the products you love.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item banners2">
+                    <div class="container">
+                        <div class="carousel-caption d-md-block mb-5">
+                            <h1>Mac</h1>
+                            <h3 class="text-secondary fw-light">Store. The best way to buy the products you love.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item banners3">
+                    <div class="container">
+                        <div class="carousel-caption d-md-block mb-5">
+                            <h1>iPhone</h1>
+                            <h3 class="text-secondary fw-light">Store. The best way to buy the products you love.</h3>
+                        </div>		
+                    </div>
+                </div>
+
+                <div class="carousel-item banners4">
+                    <div class="container">
+                        <div class="carousel-caption d-md-block mb-5">
+                            <h1 class="text-dark">iPad</h1>
+                            <h3 class="text-secondary fw-light">Store. The best way to buy the products you love.</h3>
+                        </div>		
+                    </div>
+                </div>
+
+                <div class="carousel-item banners5">
+                    <div class="container">
+                        <div class="carousel-caption d-md-block mb-5">
+                            <h1>Watch</h1>
+                            <h3 class="text-secondary fw-light">Store. The best way to buy the products you love.</h3>
+                        </div>		
+                    </div>
+                </div>
+
+                <div class="carousel-item banners6">
+                    <div class="container">
+                        <div class="carousel-caption d-md-block mb-5">
+                            <h1>Airpod</h1>
+                            <h3 class="text-secondary fw-light">Store. The best way to buy the products you love.</h3>
+                        </div>		
+                    </div>
+                </div>
+
+                <a href="#mycarousel" class="carousel-control-prev" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#mycarousel" class="carousel-control-next" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+<!-- end about section -->
+
+
+
+<!-- start iPhone -->
+    <section id="iphone" class="text-light text-center py-3">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h1 class="fw-bold">iPhone</h1>
+                </div>
+
+                <div class="col-md-12">
+                   <p class="fw-bold">
+                        iPhone 14 Pro and iPhone 14
+                        <span class="fw-light" style="display:block;">Better than others</span>
+                    </p>
+                    <div class="col-md-12 img">
+                        <img src="./assets/img/iphone2.jpg" width="100%" class="iphonedebut" alt="iphone" />
+                        <img src="./assets/img/iphone3.jpg" width="100%" class="iphone14pro" alt="iphone14pro" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 mb-5">
+                    <div class="iphoneboxes">
+                        <div>
+                            <img src="./assets/img/iphone14pro.jpg"  alt="iphone14pro" />
+                        </div>
+
+                        <div class="iphonecontents">
+                            <h4>IPHONE 14 PRO</h4>
+                            <p>
+                                A16 Bionic Chip
+                                6.1 inch Super Retina display(120hz)
+                                128GB/256GB/512GB
+                            </p>
+                            <h6>From $999</h6>
+                            <div class="choosecolor">
+                                <a href="javascript:void(0);" class="color goldcolor"></a>
+                                <a href="javascript:void(0);" class="color blackcolor"></a>
+                                <a href="javascript:void(0);" class="color whitecolor"></a>
+                            </div>
+                            <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 mb-5">
+                    <div class="iphoneboxes">
+                        <div>
+                            <img src="./assets/img/iphone14promax.jpg"  alt="iphone14promax" />
+                        </div>
+
+                        <div class="iphonecontents">
+                            <h4>IPHONE 14 PRO MAX</h4>
+                            <p>
+                                A16 Bionic Chip
+                                6.7 inch Super Retina display(120hz)
+                                128GB/256GB/512GB
+                            </p>
+                            <div class="choosecolor">
+                                <a href="javascript:void(0);" class="color goldcolor"></a>
+                                <a href="javascript:void(0);" class="color blackcolor"></a>
+                                <a href="javascript:void(0);" class="color whitecolor"></a>
+                            </div>
+                            <h6>From $1099</h6>
+                            <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 mb-5">
+                    <div class="iphoneboxes">
+                        <div>
+                            <img src="./assets/img/iphone14.jpg"  alt="iphone14" />
+                        </div>
+
+                        <div class="iphonecontents">
+                            <h4>IPHONE 14</h4>
+                            <p>
+                                A15 Bionic Chip
+                                6.1 inch Super Retina display
+                                128GB/256GB/512GB
+                            </p>
+                            <div class="choosecolor">
+                                <a href="javascript:void(0);" class="color skybluecolor"></a>
+                                <a href="javascript:void(0);" class="color blackcolor"></a>
+                                <a href="javascript:void(0);" class="color whitecolor"></a>
+                            </div>
+                            <h6>From $799</h6>
+                            <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 mb-5">
+                    <div class="iphoneboxes">
+                        <div>
+                            <img src="./assets/img/iphone14plus.jpg"  alt="iphone14plus" />
+                        </div>
+
+                        <div class="iphonecontents">
+                            <h4>IPHONE 14 PLUS</h4>
+                            <p>
+                                A15 Bionic Chip
+                                6.7 inch Super Retina display
+                                128GB/256GB/512GB
+                            </p>
+                            <div class="choosecolor">
+                                <a href="javascript:void(0);" class="color purplecolor"></a>
+                                <a href="javascript:void(0);" class="color blackcolor"></a>
+                                <a href="javascript:void(0);" class="color whitecolor"></a>
+                            </div>
+                            <h6>From $899</h6>
+                            <a href="#javascript:void(0);" class="btn btn-primary mb-2 buy" onclick="beforebuy()"> Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- end iPhone -->
+
+
+
+<!-- start Mac -->
+<section id="mac" class="text-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="fw-bold">Mac</h1>
+                <p class="fw-light" style="display:block;">Better Faster Best Display</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="macboxes">
+                    <div>
+                        <img src="./assets/img/macbookpro.jpg" alt="macbookpro" />
+                    </div>
+                    <div class="maccontents">
+                        <h4>MACBOOK PRO</h4>
+                        <p>
+                            M1 chip
+                            12-Core CPU
+                            19-Core GPU
+                            16GB Unified Memory
+                            512GB SSD Storage
+                            16-core Neural Engine
+                            16-inch Liquid Retina XDR display
+                        </p>
+                        <div class="choosecolor">
+                            <a href="javascript:void(0);" class="color silvercolor"></a>
+                            <a href="javascript:void(0);" class="color whitecolor"></a>
+                        </div>
+                        <h6>From $1999</h6>
+                        <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="macboxes">
+                    <div>
+                        <img src="./assets/img/macbookair.jpg" alt="macbookair" />
+                    </div>
+                    <div class="maccontents">
+                        <h4>MACBOOK AIR</h4>
+                        <p>
+                            M1 chip
+                            8-Core CPU
+                            8-Core GPU
+                            8GB Unified Memory
+                            256GB SSD Storage
+                            16-core Neural Engine
+                            13.3-inch Retina display
+                        </p>
+                        <div class="choosecolor">
+                            <a href="javascript:void(0);" class="color rosecolor"></a>
+                            <a href="javascript:void(0);" class="color blackcolor"></a>
+                            <a href="javascript:void(0);" class="color silvercolor"></a>
+                        </div>
+                        <h6>From $999</h6>
+                        <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="macboxes">
+                    <div>
+                        <img src="./assets/img/imac.jpg" alt="imac" />
+                    </div>
+
+                    <div class="maccontents">
+                        <h4>IMAC</h4>
+                        <p>
+                            M1
+                            8-core CPU
+                            8-core GPU
+                            8GB Unified Memory
+                            256GB SSD Storage
+                            16-core Neural Engine
+                            24-inch 4.5K Retina display
+                        </p>
+                        <div class="choosecolor">
+                            <a href="javascript:void(0);" class="color greencolor"></a>
+                            <a href="javascript:void(0);" class="color navycolor"></a>
+                            <a href="javascript:void(0);" class="color silvercolor"></a>
+                        </div>
+                        <h6>From $1299</h6>
+                        <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Mac -->
+
+
+
+<!-- start iPad Airpod Watch Accessories section -->
+    <section id="padpodwatchacc" class="text-center py-2">
+        <div class="container">
+            <div class="row">
+                <!-- start ipad -->
+                <div id="ipad" class="col-md-6 col-sm-6 mb-2">
+                    <h1 class="fw-bold">iPad</h1>
+                    <p class="fw-light" style="display:block;">Lovable Drawable Magical.</p>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 mb-2">
+                            <ul id="lightslideripad">
+                                <li><img src="./assets/img/ipad1.jpg" alt="ipad1" /></li>
+                                <li><img src="./assets/img/ipad2.jpg" alt="ipad2" /></li>
+                                <li><img src="./assets/img/ipad3.jpg" alt="ipad3" /></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 mb-3">
+                            <div class="boxes">
+                                <div>
+                                    <img src="./assets/img/ipadair.jpg"  alt="ipadair" />
+                                </div>
+            
+                                <div class="contents">
+                                    <h4>IPAD AIR</h4>
+                                    <p>
+                                        M2 Chip 
+                                        12.9 inch Liquid Retina XDR display
+                                        128GB/256GB/512GB
+                                    </p>
+                                    <div class="choosecolor">
+                                        <a href="javascript:void(0);" class="color rosecolor"></a>
+                                        <a href="javascript:void(0);" class="color graycolor"></a>
+                                        <a href="javascript:void(0);" class="color skybluecolor"></a>
+                                    </div>
+                                    <h6>From $799</h6>
+                                    <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                                </div>    
+                            </div>
+
+                            <div class="visiblelgs">
+                                <div class="mb-2 choosecolor">
+                                    <a href="javascript:void(0);" class="color skybluecolor"></a>
+                                    <a href="javascript:void(0);" class="color rosecolor"></a>
+                                    <a href="javascript:void(0);" class="color graycolor"></a>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#beforebuymodal"> Buy</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 mb-3">
+                            <div class="boxes">
+                                <div>
+                                    <img src="./assets/img/ipadpro.jpg"  alt="ipadpro" />
+                                </div>
+            
+                                <div class="contents">
+                                    <h4>IPAD PRO</h4>
+                                    <p>
+                                        M2 Chip
+                                        12.9 inch Liquid Retina XDR display
+                                        128GB/256GB/512GB
+                                    </p>
+                                    <div class="choosecolor">
+                                        <a href="javascript:void(0);" class="color silvercolor"></a>
+                                        <a href="javascript:void(0);" class="color graycolor"></a>
+                                    </div>
+                                    <h6>From $799</h6>
+                                    <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                                </div>
+                            </div>
+
+                            <div class="visiblelgs">
+                                <div class="mb-2 choosecolor">
+                                    <a href="javascript:void(0);" class="color silvercolor"></a>
+                                    <a href="javascript:void(0);" class="color graycolor"></a>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#beforebuymodal"> Buy</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 mb-3">
+                            <div class="boxes">
+                                <div>
+                                    <img src="./assets/img/ipadmini.jpg"  alt="ipadmini" />
+                                </div>
+            
+                                <div class="contents">
+                                    <h4>IPAD MINI</h4>
+                                    <p>
+                                        A15 Bionic Chip
+                                        8.3 inch Liquid Retina display
+                                        64GB/128GB/256GB
+                                    </p>
+                                    <div class="choosecolor">
+                                        <a href="javascript:void(0);" class="color rosecolor"></a>
+                                        <a href="javascript:void(0);" class="color graycolor"></a>
+                                        <a href="javascript:void(0);" class="color purplecolor"></a>
+                                    </div>
+                                    <h6>From $899</h6>
+                                    <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                                </div>
+                            </div>
+                            
+                            <div class="visiblelgs">
+                                <div class="mb-2 choosecolor">
+                                    <a href="javascript:void(0);" class="color rosecolor"></a>
+                                    <a href="javascript:void(0);" class="color graycolor"></a>
+                                    <a href="javascript:void(0);" class="color purplecolor"></a>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end ipad -->
+
+                <!-- start watch -->
+                <div id="watch" class="col-md-6 col-sm-6 mb-2">
+                    <h1 class="fw-bold">Watch</h1>
+                    <p class="fw-light" style="display:block;">A great deal
+                        to love.</p>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div id="lightsliderwatch">
+                                <a href="#javascript:void(0);"><img src="./assets/img/watch2.jpg" alt="watch2" /></a>
+                                <a href="#javascript:void(0);"><img src="./assets/img/watch3.jpg" alt="watch3" /></a>
+                                <a href="#javascript:void(0);"><img src="./assets/img/watch4.jpg" alt="watch4" /></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 mb-3">
+                            <div class="boxes">
+                                <div>
+                                    <img src="./assets/img/watchultra.jpg"  alt="watchultra" />
+                                </div>
+            
+                                <div class="contents">
+                                    <h5>APPLE WATCH ULTRA</h5>
+                                    <p>
+                                        49mm
+                                        <span class="fw-light d-block">
+                                            Swimproof20
+                                            IP6X dust resistant21
+                                        </span>
+                                        Always-On Retina display
+                                        <span class="fw-light d-block">
+                                            Up to 2000 nits
+                                        </span>
+                                        Blood Oxygen app
+                                    </p>
+                                    <div class="choosecolor">
+                                        <a href="javascript:void(0);" class="color graycolor"></a>
+                                    </div>
+                                    <h6>From $799</h6>
+                                    <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                                </div>    
+                            </div>
+
+                            <div class="visiblelgs">
+                                <div class="choosecolor">
+                                    <a href="javascript:void(0);" class="color graycolor"></a>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 mb-3">
+                            <div class="boxes">
+                                <div>
+                                    <img src="./assets/img/watch8.jpg"  alt="watch8" />
+                                </div>
+            
+                                <div class="contents">
+                                    <h5>APPLE WATCH 8 SERIES</h5>
+                                    <p>
+                                        49mm
+                                        <span class="fw-light d-block">
+                                            Swimproof20
+                                            IP6X dust resistant21
+                                        </span>
+                                        Always-On Retina display
+                                        <span class="fw-light d-block">
+                                            Up to 1000 nits
+                                        </span>
+                                        Blood Oxygen app
+                                    </p>
+                                    <div class="choosecolor">
+                                        <a href="javascript:void(0);" class="color silvercolor"></a>
+                                        <a href="javascript:void(0);" class="color color"></a>
+                                        <a href="javascript:void(0);" class="color blackcolor"></a>
+                                    </div>
+                                    <h6>From $399</h6>                                   
+                                    <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                                </div>
+                            </div>
+
+                            <div class="visiblelgs">
+                                <div class="choosecolor">
+                                    <a href="javascript:void(0);" class="color silvercolor"></a>
+                                    <a href="javascript:void(0);" class="color color"></a>
+                                    <a href="javascript:void(0);" class="color blackcolor"></a>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 mb-3">
+                            <div class="boxes">
+                                <div>
+                                    <img src="./assets/img/watchse.jpg"  alt="watchse" />
+                                </div>
+            
+                                <div class="contents">
+                                    <h5>APPLE WATCH SE</h5>
+                                    <p>
+                                        49mm
+                                        <span class="fw-light d-block">
+                                            Swimproof20
+                                            IP6X dust resistant21
+                                        </span>
+                                        Retina display
+                                        <span class="fw-light d-block">
+                                            Up to 1000 nits
+                                        </span>
+                                        -
+                                    </p>
+                                    <div class="choosecolor">
+                                        <a href="javascript:void(0);" class="color blackcolor"></a>
+                                        <a href="javascript:void(0);" class="color browncolor"></a>
+                                        <a href="javascript:void(0);" class="color silvercolor"></a>
+                                    </div>
+                                    <h6>From $249</h6>
+                                <a href="#javascript:void(0);" class="btn btn-primary mb-2" onclick="beforebuy()"> Buy</a>
+                                </div>
+                            </div>
+                            
+                            <div class="visiblelgs">
+                                <div class="choosecolor">
+                                    <a href="javascript:void(0);" class="color blackcolor"></a>
+                                    <a href="javascript:void(0);" class="color browncolor"></a>
+                                    <a href="javascript:void(0);" class="color silvercolor"></a>
+                                </div>
+                                <button type="button" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end watch -->
+
+                <!-- start airpod -->
+                <div id="airpods" class="col-md-6 col-sm-6 mb-2">
+                    <h1 class="fw-bold">Airpod</h1>
+                    <p class="fw-light" style="display:block;">Best Audio Quality</p>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div id="mycarousels" class="carousel slide" data-bs-ride="carousel">
+                                <ul class="carousel-indicators list-unstyled">
+                                    <li class="active" data-bs-target="#mycarousels" data-bs-slide-to="0"></li>
+                                    <li data-bs-target="#mycarousels" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#mycarousels" data-bs-slide-to="2"></li>
+                                    <li data-bs-target="#mycarousels" data-bs-slide-to="3"></li>
+                                </ul>
+
+                                <div class="carousel-inner airpods">
+                                    <div class="carousel-item active airpods1">
+                                        <div class="container">
+                                            <div class="carousel-caption d-md-block mb-5">
+                                                <h3>Airpods</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item airpods2">
+                                        <div class="container">
+                                            <div class="carousel-caption d-md-block text-dark mb-5">
+                                                <h3>Airpods 3rd Generation</h3>
+                                                <p class="fw-light">
+                                                    <span class="d-block">-</span>
+                                                    <span class="d-block">Sweat and water resistant</span>
+                                                    <span class="d-block">Lightning Charging Case or MagSafe Charging Case</span>   
+                                                </p>
+                                                <h5>$169</h5>
+                                                <a href="#javascript:void(0);" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item airpods3">
+                                        <div class="container">
+                                            <div class="carousel-caption d-md-block text-dark mb-5">
+                                                <h3>Airpods Pro 2nd Generation</h3>
+                                                <p class="fw-light">
+                                                    <span class="d-block">Active Noise Cancellation and Adaptive Transparency</span>
+                                                    <span class="d-block">Sweat and water resistant</span>
+                                                    <span class="d-block">MagSafe Charging Case with speaker and lanyard loop</span>   
+                                                </p>
+                                                <h5>$249</h5>
+                                                <a href="#javascript:void(0);" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item airpods4">
+                                        <div class="container">
+                                            <div class="carousel-caption d-md-block text-dark mb-5">
+                                                <h3>Airpods Max</h3>
+                                                <p class="fw-light">
+                                                    <span class="d-block">Active Noise Cancellation and Adaptive Transparency</span>
+                                                    <span class="d-block">-</span>
+                                                    <span class="d-block">Smart Case</span>
+                                                </p>
+                                                <h5>$549</h5>
+                                                <a href="#javascript:void(0);" class="btn btn-primary mb-2 buy" data-bs-toggle="modal" data-bs-target="#beforebuymodal">Buy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="#mycarousels" class="carousel-control-prev" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a href="#mycarousels" class="carousel-control-next" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end watch -->
+
+                <!-- start accessories -->
+                <div id="accessories" class="col-md-6 col-sm-6 mb-2">
+                    <h1 class="fw-bold">Accessories</h1>
+                    <div class="mb-2">
+                        <h6>
+                            Mix. Match. MagSafe.
+                            <span class="fw-light d-block mb-2">Snap on a case, wallet, wireless charger, or battery pack.</span>
+                            <img src="./assets/img/accessories.jpg" width="100%" alt="accessories"  />
+                        </h6>
+                    </div>
+
+                    <div class="mb-3">
+                        <h6>Find the accessories you're looking for.</h6>
+                        <div>
+                            <label for="search"></label>
+                            <input type="search" name="search" id="search" class="searchbox" placeholder="Search" />
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3 justify-content-center">
+                        <div>
+                            <a href="javascript:void(0);" class="nav-link px-2"><i class="fas fa-mobile pe-1"></i></a>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="nav-link px-2"><i class="fas fa-desktop pe-1"></i></a>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="nav-link px-2"><i class="fas fa-tablet pe-1"></i></a>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="nav-link px-2"><i class="fas fa-clock pe-1"></i></a>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0);" class="nav-link px-2"><i class="fas fa-headphones pe-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end accessories -->
+            </div>
+        </div>
+    </section>
+<!-- end iPad Airpod Watch Accessories section -->
+
+
+
+<!-- start contact section -->
+    <section id="contacts" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <h1 class="text-center fw-bold">Contacts</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 mb-2">
+                    <div class="card">
+                        <div class="card-header locationheader">
+                            <h5 class="text-center">Autumn Apple Store Location</h5>
+                        </div>
+
+                        <div class="card-body locationbody">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.64135494077!2d96.1351260148183!3d16.844139088406315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194962007f863%3A0x1ce0d39a47ca647c!2sLOTTE%20HOTEL%20YANGON!5e0!3m2!1sen!2ssg!4v1670413056578!5m2!1sen!2ssg" class="maps" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 mb-2">
+                    <div class="container icloud">
+                        <div class="text-center mb-2 logintext">
+                            <h5>Log in Your Apple ID</h5>
+                        </div>
+
+                        <div class="mb-3">
+                            <form method="" action="">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" autocomplete="off" />
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" />
+                                </div>
+                            </form>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg loginbtn" onclick="loginbtn()">Log In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- end contact section -->
+
+
+
+<!-- start footer section -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 mt-3 mb-3">
+                    <div class="card">
+                        <div class="card-header bg-dark contactheader">
+                            <h5 class="text-center text-white card-title"><img src="./assets/img/autumn.jpg" width="80px" alt="autumnapplestore" />Autumn Apple Store</h5>
+                        </div>
+
+                        <!-- <div class="card-body">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.64135494077!2d96.1351260148183!3d16.844139088406315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c194962007f863%3A0x1ce0d39a47ca647c!2sLOTTE%20HOTEL%20YANGON!5e0!3m2!1sen!2ssg!4v1670413056578!5m2!1sen!2ssg" class="maps" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div> -->
+
+                        <div class="card-body contactbody">
+                            <span><i class="fas fa-phone-alt"></i> : 09761407373</span>
+							<span><i class="fas fa-envelope"></i> : phonemyatzin7@gmail.com</span>
+							<span><i class="fas fa-map-marker-alt"></i> : Pyay Road,Yangon</span>
+                        </div>
+                    </div>
+
+                    <!-- <h5 class="text-center"><img src="./assets/img/ht.jpg" width="50px" alt="htapplestore" />HT Apple Store</h5>
+                    <ul class="text-center list-unstyled">
+                        <li><i class="fas fa-phone-alt"></i> 09761407373</li>
+                        <li><i class="fas fa-envelope"></i> phonemyatzin7@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Pyay Road Yangon</li>
+                    </ul> -->
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-6 mt-3 mb-2">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
+                            <h5 class="text-center">Visit Us</h5>
+                            <div class="text-center mt-3 socialicons">
+                                <a href="#javascript:void(0);"><i class="fab fa-facebook fa-lg"></i></a>
+                                <a href="#javascript:void(0);"><i class="fab fa-viber fa-lg"></i></a>
+                                <a href="#javascript:void(0);"><i class="fab fa-telegram fa-lg"></i></a>
+                            </div>
+                        </div>
+        
+                        <div class="col-sm-4 col-md-4 col-lg-4 mb-2">
+                            <h5 class="text-center">Download App</h5>
+                            <div class="text-center faq">
+                                <a href="#javascript:void(0);"><i class="fab fa-app-store fa-lg"></i> App Store</a>
+                                <a href="#javascript:void(0);"><i class="fas fa-link"></i> Direct Link</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4 col-lg-4 mb-2">
+                            <h5 class="text-center">Account</h5>
+                            <div class="text-center faq">
+                                <a href="#javascript:void(0);">Manage Your Apple ID</a>
+                                <a href="#javascript:void(0);">Apple Store Account</a>
+                                <a href="#javascript:void(0);">iCloud.com</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4 col-lg-4 mb-2">
+                            <h5 class="text-center">Items</h5>
+                            <div class="text-center faq">
+                                <a href="#javascript:void(0);">Gift Cards</a>
+                                <a href="#javascript:void(0);">TV & Home</a>
+                                <a href="#javascript:void(0);">Air Tag</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4 col-lg-4 mb-2">
+                            <h5 class="text-center">Entertainment</h5>
+                            <div class="text-center faq">
+                                <a href="#javascript:void(0);">Apple TV+</a>
+                                <a href="#javascript:void(0);">Apple Music</a>
+                                <a href="#javascript:void(0);">Apple Podcasts</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4 col-lg-4 mb-2">
+                            <h5 class="text-center">Others</h5>
+                            <div class="text-center faq">
+                                <a href="#javascript:void(0);">Privacy</a>
+                                <a href="#javascript:void(0);">Contact</a>
+                                <a href="#javascript:void(0);">Supports</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center border-top">
+                <p>&copy; <span id="getyear"></span> Copyright, HT Apple Inc. All right reserved.</p>
+            </div>
+        </div>
+    </section>
+<!-- end footer section -->
+
+
+
+
+
+
+
+
+
+    <!-- boostrap css1 js1 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <!-- jquery js1 -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" type="text/javascript"></script>
+    <!-- jqueryui css1 js1 -->
+    <script src="./assets/libs/jquery-ui-1.13.2.custom/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- lightslider css1 js1 -->
+	<script src="./assets/libs/lightslider-master/dist/js/lightslider.min.js" type="text/javascript"></script>
+    <!-- custom js1 -->
+    <script src="./js/index.js" type="text/javascript"></script>
+</body>
+</html>
